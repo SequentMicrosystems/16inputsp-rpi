@@ -1,6 +1,6 @@
 # lib16inp
 
-This is the python library to control [16- INPUTS card for Raspberry](https://www.sequentmicrosystems.com/)
+This is the python library to control [16- INPUTS proto card for Raspberry](https://www.sequentmicrosystems.com/), for the 16-INPUTS card use [this](https://github.com/SequentMicrosystems/16inputs-rpi/tree/main/python)
 
 ## Install
 
