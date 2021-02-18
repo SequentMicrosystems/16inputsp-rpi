@@ -58,7 +58,7 @@ void usage(void)
 		i++;
 	}
 	printf("Where: <id> = Board level id = 0..7\n");
-	printf("Type 16inputs -h <command> for more help\n");
+	printf("Type 16inputsp -h <command> for more help\n");
 }
 
 int doBoardInit(int stack)
@@ -111,9 +111,9 @@ const CliCmdType CMD_HELP =
 	1,
 	&doHelp,
 	"\t-h		Display the list of command options or one command option details\n",
-	"\tUsage:		16inputs -h    Display command options list\n",
-	"\tUsage:		16inputs -h <param>   Display help for <param> command option\n",
-	"\tExample:	16inputs -h r    Display help for \"r\" command option\n"};
+	"\tUsage:		16inputsp -h    Display command options list\n",
+	"\tUsage:		16inputsp -h <param>   Display help for <param> command option\n",
+	"\tExample:	16inputsp -h r    Display help for \"r\" command option\n"};
 
 static void doHelp(int argc, char *argv[])
 {
@@ -168,20 +168,20 @@ const CliCmdType CMD_VERSION =
 	"-v",
 	1,
 	&doVersion,
-	"\t-v		Display the 16inputs command version number\n",
-	"\tUsage:		16inputs -v\n",
+	"\t-v		Display the 16inputsp command version number\n",
+	"\tUsage:		16inputsp -v\n",
 	"",
-	"\tExample:	16inputs -v  Display the version number\n"};
+	"\tExample:	16inputsp -v  Display the version number\n"};
 
 static void doVersion(int argc, char *argv[])
 {
 	UNUSED(argc);
 	UNUSED(argv);
 	printf(
-		"16inputs command line interface v%d.%d.%d Copyright (c) 2016 - 2020 Sequent Microsystems\n",
+		"16inputsp command line interface v%d.%d.%d Copyright (c) 2016 - 2020 Sequent Microsystems\n",
 		VERSION_BASE, VERSION_MAJOR, VERSION_MINOR);
 	printf("\nThis is free software with ABSOLUTELY NO WARRANTY.\n");
-	printf("For details type: 16inputs -warranty\n");
+	printf("For details type: 16inputsp -warranty\n");
 
 }
 
@@ -192,9 +192,9 @@ const CliCmdType CMD_WAR =
 	1,
 	&doWarranty,
 	"\t-warranty	Display the warranty\n",
-	"\tUsage:		16inputs -warranty\n",
+	"\tUsage:		16inputsp -warranty\n",
 	"",
-	"\tExample:	16inputs -warranty  Display the warranty text\n"};
+	"\tExample:	16inputsp -warranty  Display the warranty text\n"};
 
 static void doWarranty(int argc UNU, char* argv[] UNU)
 {
@@ -208,9 +208,9 @@ const CliCmdType CMD_LIST =
 		1,
 		&doList,
 		"\t-list:		List all 16inputs boards connected\n\t\t\treturn the # of boards and stack level for every board\n",
-		"\tUsage:		16inputs -list\n",
+		"\tUsage:		16inputsp -list\n",
 		"",
-		"\tExample:	16inputs -list display: 1,0 \n"};
+		"\tExample:	16inputsp -list display: 1,0 \n"};
 
 static void doList(int argc, char *argv[])
 {
@@ -290,9 +290,9 @@ const CliCmdType CMD_READ =
 		2,
 		&doRead,
 		"\trd:		Read inputs state\n",
-		"\tUsage:		16inputs <id> rd <channel>\n",
-		"\tUsage:		16inputs <id> rd\n",
-		"\tExample:	16inputs 0 rd 2; Read Status input channel #2 on Board #0\n"};
+		"\tUsage:		16inputsp <id> rd <channel>\n",
+		"\tUsage:		16inputsp <id> rd\n",
+		"\tExample:	16inputsp 0 rd 2; Read Status input channel #2 on Board #0\n"};
 
 static void doRead(int argc, char *argv[])
 {
