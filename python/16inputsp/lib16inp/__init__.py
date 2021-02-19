@@ -18,7 +18,7 @@ def readCh(stack, channel):
         bus.close()
         raise Exception(e)
     bus.close()
-    if val & (1 << (vhannel-1)):
+    if val & (1 << (channel-1)):
         return 0
     return 1
 
